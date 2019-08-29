@@ -1,0 +1,20 @@
+
+server:
+  port: 8082
+  servlet:
+    session:
+      cookie:
+        name: RESOURCE_SESSIONID
+security:
+  oauth2:
+    client:
+      clientId: mini-program
+      clientSecret: 123
+      access-token-uri: http://localhost:8080/auth/oauth/token
+      user-authorization-uri: http://localhost:8080/auth/oauth/authorize
+    resource:
+      userInfoUri: http://localhost:8080/auth/user
+
+logging:
+  level:
+    org.springframework.security: debug
